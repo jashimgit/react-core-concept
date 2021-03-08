@@ -16,8 +16,6 @@ const Home = () => {
 
         <div className="container mt-4">
             <div className="row">
-
-
                 {
                     friends.map(friend => <Friend friend={friend}></Friend>)
                 }

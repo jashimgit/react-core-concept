@@ -11,24 +11,24 @@ const boxStyle = {
 }
 const FriendDetail = () => {
     const {id} = useParams();
-    const [friend, setFriend] = useState({});
-
+    
+    const [sfriend, setSfriend] = useState({});
+   
+    
     useEffect(()=>{
         const url = `https://jsonplaceholder.typicode.com/users/${id}`;
         fetch(url)
         .then(res => res.json())
-        .then(data => setFriend(data))
+        .then(data => setSfriend(data))
     }, [id]);
-    console.log(friend);
+
 
 
     return (
-        <div style={boxStyle}>
-            <p>id : {id}</p>
-            <h4>{friend.name}</h4>
-            <p>Phone: {friend.phone}</p>
-            <p>Website: {friend.website}</p>
-            <p>Address: <span>{friend.address.street},{friend.address.suite},{friend.address.city}</span></p>
+        <div style={boxStyle} className="mx-auto">
+          <p>{id}</p>
+          <h3>Hi, I'm {sfriend.name}</h3>
+           <p> {sfriend.address.street},{sfriend.address.suite},{sfriend.address.city}</p>
         </div>
     );
 };

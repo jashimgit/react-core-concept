@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import "./Friend.css";
 
 const Friend = (props) => {
-  const { id, name, address } = props.friend;
+  // console.log(props.friend);
+  const { id, name} = props.friend;
   return (
     <div className="col-md-4">
       <div className="card mb-3">

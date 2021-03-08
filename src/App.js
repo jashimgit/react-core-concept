@@ -5,10 +5,8 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-
 
 import Nomatch from './component/Error/Nomatch';
 import Home from './component/Home/Home';
@@ -20,7 +18,7 @@ function App() {
       <Nav></Nav>
 
       <Switch>
-        <Route path="/friend ">
+        <Route path="/friend">
           <Friend></Friend>
         </Route>
         <Route exact path="/" >

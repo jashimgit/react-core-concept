@@ -18,19 +18,17 @@ const FriendDetail = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setFriend(data))
-    
-    },[]);
+    });
+    console.log(friend);
 
-// console.log(friend);
 
-const [street] = friend.address.street;
     return (
         <div style={boxStyle}>
             <p>id : {id}</p>
             <h4>{friend.name}</h4>
             <p>Phone: {friend.phone}</p>
             <p>Website: {friend.website}</p>
-            <p>Address: <span>{street}</span></p>
+            <p>Address: <span>{friend.address.street},{friend.address.suite},{friend.address.city}</span></p>
         </div>
     );
 };

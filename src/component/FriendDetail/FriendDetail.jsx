@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import {useState,useEffect } from 'react';
 
-const boxStyle={
+const boxStyle = {
     height : '300px',
     width: '400px',
     margin: '10px',
@@ -18,7 +18,7 @@ const FriendDetail = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setFriend(data))
-    });
+    }, [id]);
     console.log(friend);
 
 

@@ -1,23 +1,21 @@
-
-import { Link } from 'react-router-dom';
-import './Friend.css';
-
-
+import { Link } from "react-router-dom";
+import "./Friend.css";
 
 const Friend = (props) => {
+  const { id, name, address } = props.friend;
+  return (
+    <div className="col-md-4">
+      <div className="card mb-3">
+        <div className="card-body">
+            <h3 className="card-title">{name}</h3>
 
-    const {id, name, address} = props.friend;
-   
-    return (
-        <div className="friend-item">
-            <b>id : {id}</b>
-            <h4>{name}</h4>
-            <p>{address.street}</p>
-            <Link to={`/friend/${id}`}>
-                <button>view details of {id}</button>
-            </Link>
+        <Link to={`/friend/${id}`}>
+          <button className="btn btn-info">view details of {id}</button>
+        </Link>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Friend;

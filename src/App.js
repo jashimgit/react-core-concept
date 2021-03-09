@@ -11,6 +11,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Countries from "./component/Countries/Countries";
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route exact path="/" >
           <Home></Home>
+        </Route>
+        <Route path="/country">
+          <Countries></Countries>
         </Route>
         <Route path="*">
           <Nomatch />

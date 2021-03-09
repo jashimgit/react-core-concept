@@ -40,6 +40,11 @@ const Nav = () => {
                 Friend
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/country">
+                Countries
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

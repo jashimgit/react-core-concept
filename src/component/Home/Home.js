@@ -1,26 +1,55 @@
-import React from "react";
-import Friend from "../Friend/Friend";
-import { useState, useEffect } from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+
 
 const Home = () => {
-    const [friends, setFriends] = useState([]);
 
-    useEffect(() => {
-        const url = "https://jsonplaceholder.typicode.com/users";
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setFriends(data))
-    }, []);
 
-    return (
-        <div className="container mt-4">
-            <div className="row">
-                {friends.map((friend) => (
-                    <Friend friend={friend}></Friend>
-                ))}
-            </div>
-        </div>
-    );
+	return (
+		<div className='container mt-4 jumbotron'>
+			<div className='row'>
+				<div className='col-md-12'>
+					<h3 className='text-center'>Friends list</h3>
+				</div>
+				<div className="col-md-12 pb-3">
+					<div className="row">
+						<div className="col-md-4">
+							<div className="card">
+								<div className="card-body">
+									<h4 className="card-title">
+										Friends
+									</h4>
+									<Link to="/friend">
+										<button className="btn btn-info">Friend list</button>
+									</Link>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-4">
+							<div className="card">
+								<div className="card-body">
+									<h4 className="card-title">
+										Friends
+									</h4>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-4">
+							<div className="card">
+								<div className="card-body">
+									<h4 className="card-title">
+										Friends
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	);
 };
 
 export default Home;

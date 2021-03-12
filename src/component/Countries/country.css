@@ -3,3 +3,7 @@
     height: 10vw;
     object-fit: cover;
 }
+
+.bg-tomato {
+    background-color: #f19f9f;
+}
